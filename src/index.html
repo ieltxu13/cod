@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create On Demand</title>
+    <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="vendors/lodash/lodash.min.js" charset="utf-8"></script>
+    <script src="vendors/fabric.js/dist/fabric.min.js" charset="utf-8"></script>
+    <script src="vendors/spectrum/spectrum.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="vendors/spectrum/spectrum.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app="create-on-demand">
+    <ag-canvas width="400" height="400"></ag-canvas>
+
+    <ag-text-list></ag-text-list>
+    <ag-new-text></ag-new-text>
+    <ag-canvas-settings></ag-canvas-settings>
+
+    <color-picker></color-picker>
+
+
+    <script src="app/create-on-demand/create-on-demand.js" charset="utf-8"></script>
+    <!-- UTILS -->
+    <script src="app/create-on-demand/utils/color-picker/color.picker.directive.js" charset="utf-8"></script>
+    <!-- CANVAS -->
+    <script src="app/create-on-demand/canvas/canvas.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/canvas.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/canvas-settings.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/canvas-settings.directive.js" charset="utf-8"></script>
+    <!-- OBJECT -->
+    <script src="app/create-on-demand/canvas/object/object.service.js" charset="utf-8"></script>
+    <!-- TEXT LIST -->
+    <script src="app/create-on-demand/canvas/text-list/text-list.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text-list/text-list.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text-list/text-list.directive.js" charset="utf-8"></script>
+    <!-- TEXT -->
+    <script src="app/create-on-demand/canvas/text/text.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/text.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/text.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/new-text.directive.js" charset="utf-8"></script>
+  </body>
+</html>

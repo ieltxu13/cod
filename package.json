@@ -1,0 +1,16 @@
+{
+  "name": "create-on-demand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Ieltxu Algañarás <ieltxu.alganaras@gmail.com> (http://ieltxualganaras.com.ar/)",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-connect": "2.2.0",
+    "gulp-watch": "4.3.5"
+  }
+}

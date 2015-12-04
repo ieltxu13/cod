@@ -1,0 +1,26 @@
+{
+  "name": "COD",
+  "version": "0.0.0",
+  "authors": [
+    "ieltxu13 <ieltxu.alganaras@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "angular": "~1.4.7",
+    "fabric.js": "fabric#~1.5.0",
+    "spectrum": "~1.7.1"
+  }
+}

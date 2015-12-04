@@ -1,0 +1,7 @@
+<div class="canvas-config-container" ng-controller="AgCanvasSettingsController as AgCanvasSettingsController">
+  Width: <input type="number" ng-model="AgCanvasSettingsController.width"/>
+  Height: <input type="number" ng-model="AgCanvasSettingsController.height"/>
+  <button type="button" ng-click="AgCanvasSettingsController.changeSize()">Change Size</button>
+  Color: <input type="text" ng-model="AgCanvasSettingsController.backgroundColor"/>
+  <button type="button" ng-click="AgCanvasSettingsController.changeBackgroundColor()">Change Background Color</button>
+</div>
