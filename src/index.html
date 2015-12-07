@@ -9,16 +9,25 @@
     <script src="vendors/fabric.js/dist/fabric.min.js" charset="utf-8"></script>
     <script src="vendors/spectrum/spectrum.js" charset="utf-8"></script>
     <link rel="stylesheet" href="vendors/spectrum/spectrum.css" media="screen" title="no title" charset="utf-8">
+    <script src="vendors/angular-spectrum-colorpicker/dist/angular-spectrum-colorpicker.js" charset="utf-8"></script>
+    <script src="vendors/webfontloader/webfontloader.js" charset="utf-8"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Sanchez']
+        }
+      });
+    </script>
   </head>
   <body ng-app="create-on-demand">
-    <ag-canvas width="400" height="400"></ag-canvas>
+    <ag-canvas width="544" height="319"></ag-canvas>
 
     <ag-text-list></ag-text-list>
     <ag-new-text></ag-new-text>
     <ag-canvas-settings></ag-canvas-settings>
-
-    <color-picker></color-picker>
-
+    <div ng-controller="AgTemplateController as AgTemplateController">
+      <button type="button" ng-click="AgTemplateController.loadTemplate('AG-1052')">Load Template</button>
+    </div>
 
     <script src="app/create-on-demand/create-on-demand.js" charset="utf-8"></script>
     <!-- UTILS -->
@@ -39,5 +48,17 @@
     <script src="app/create-on-demand/canvas/text/text.controller.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/text/text.directive.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/text/new-text.directive.js" charset="utf-8"></script>
+    <!-- TEXT CONTROLS -->
+    <script src="app/create-on-demand/canvas/text/controls/font/text.control.font.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/controls/font/text.control.font.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/controls/color/text.control.color.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/controls/color/text.control.color.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/controls/size/text.control.size.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/text/controls/size/text.control.size.directive.js" charset="utf-8"></script>
+    <!-- TEMPLATES -->
+    <script src="app/create-on-demand/template/template.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/template/template.controller.js" charset="utf-8"></script>
+
+
   </body>
 </html>

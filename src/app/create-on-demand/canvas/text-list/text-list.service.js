@@ -12,6 +12,7 @@
 
       addText: addText,
       getTextList: getTextList,
+      populateTextList: populateTextList,
       remove: remove
     };
 
@@ -23,6 +24,10 @@
 
     function getTextList() {
       return service.textList;
+    }
+
+    function populateTextList(textList) {
+      service.textList = textList;
     }
 
     function remove(text) {

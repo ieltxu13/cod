@@ -9,14 +9,15 @@
   function agNewText(agTextService, agTextListService) {
     var directive = {
       scope: {
-        value: '@'
+        value: '@',
+        font: '@',
+        fontWeight: '@',
+        color: '@'
       },
       restrict: 'EA',
-      template: '<input type="text" ng-model="value"/><button ng-click="AgNewTextController.createText(value)">New Text</button>',
+      templateUrl: 'app/create-on-demand/canvas/text/new-text.template.html',
       controller: AgNewTextController,
       controllerAs: 'AgNewTextController'
-    //  templateUrl: 'agg/create-on-demand/canvas/text/new-text.template.html'
-
     };
 
     return directive;
@@ -24,13 +25,16 @@
     function AgNewTextController() {
 
       this.createText = createText;
-
-      function createText(value) {
+      var scope = this;
+      function createText() {
         var opts = {
-          text: value
+          text: scope.value,
+          font: scope.font,
+          fontWeight: scope.fontWeight,
+          color: scope.color,
         }
         agTextListService.addText(agTextService.createText(opts));
-        value = "";
+        scope.value = "";
       }
     }
 

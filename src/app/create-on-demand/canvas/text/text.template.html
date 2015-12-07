@@ -1,4 +1,7 @@
 <div ng-controller="AgTextController as AgTextController">
   <input ng-model="text.text" ng-change="text.canvas.renderAll()" />
   <a ng-click="AgTextController.remove(text)">X</a>
+  <ag-text-font text="text"></ag-text-font>
+  <ag-text-color text="text"></ag-text-color>
+  <ag-text-size text="text"></ag-text-size>
 </div>

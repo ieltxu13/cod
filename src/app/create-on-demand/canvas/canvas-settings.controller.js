@@ -10,6 +10,7 @@
 
     this.changeSize = changeSize;
     this.changeBackgroundColor = changeBackgroundColor;
+    this.canvasToJSON = canvasToJSON;
     this.width = parseInt(agCanvasService.canvas.getWidth());
     this.height = parseInt(agCanvasService.canvas.getHeight());
     this.backgroundColor = agCanvasService.canvas.backgroundColor;
@@ -22,6 +23,10 @@
     function changeBackgroundColor() {
       agCanvasService.canvas.setBackgroundColor(this.backgroundColor);
       agCanvasService.canvas.renderAll();
+    }
+
+    function canvasToJSON() {
+      console.log(agCanvasService.canvas.toJSON());
     }
 
   }
