@@ -1,0 +1,25 @@
+{
+  "templateSize": {
+    "width": 3.625,
+    "height": 2
+  },
+  "webScale": 0.5,
+  "fontFamilies": [
+    {
+      "name": "Sanchez",
+      "fonts":[
+        {
+          "name": "Sanchez",
+          "description": "Sanchez",
+          "weight": "normal"
+        },
+        {
+          "name": "Sanchez",
+          "description": "Sanchez Bold",
+          "weight": "bold"
+        }
+      ]
+    }
+  ],
+  "template": {"objects":[{"type":"i-text","originX":"left","originY":"top","left":238,"top":84,"width":221.8,"height":52.43,"fill":"#8f491e","stroke":null,"strokeWidth":1,"strokeDashArray":null,"strokeLineCap":"butt","strokeLineJoin":"miter","strokeMiterLimit":10,"scaleX":1,"scaleY":1,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"clipTo":null,"backgroundColor":"","fillRule":"nonzero","globalCompositeOperation":"source-over","text":"Your Name","fontSize":40,"fontWeight":"bold","fontFamily":"Sanchez","fontStyle":"","lineHeight":1.16,"textDecoration":"","textAlign":"left","textBackgroundColor":"","styles":{}}],"background":"","backgroundImage":{"type":"image","originX":"left","originY":"top","left":0,"top":0,"width":1088,"height":637,"fill":"rgb(0,0,0)","stroke":null,"strokeWidth":1,"strokeDashArray":null,"strokeLineCap":"butt","strokeLineJoin":"miter","strokeMiterLimit":10,"scaleX":0.5,"scaleY":0.5,"angle":0,"flipX":false,"flipY":false,"opacity":1,"shadow":null,"visible":true,"clipTo":null,"backgroundColor":"","fillRule":"nonzero","globalCompositeOperation":"source-over","src":"http://localhost:3000/resources/AG1052-FRONT-picture-Image_0004.png","filters":[],"crossOrigin":"","alignX":"none","alignY":"none","meetOrSlice":"meet"}}
+}

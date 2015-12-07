@@ -1,0 +1,10 @@
+<input type="text" ng-model="AgNewTextController.value" />
+<button ng-click="AgNewTextController.createText()">New Text</button>
+Font<select ng-model="AgNewTextController.font">
+  <option style="font-family: Sanchez" value="Sanchez">Sanchez</option>
+</select>
+Font Weight<select ng-model="AgNewTextController.fontWeight">
+  <option value="normal">normal</option>
+  <option value="bold">bold</option>
+</select>
+Color <spectrum-colorpicker ng-model="AgNewTextController.color" format="'hex'" options="{showInput: true, showAlpha: true}"></spectrum-colorpicker>

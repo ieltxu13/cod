@@ -1,0 +1,7 @@
+<div class="color-cotrol-wrapper" ng-init="AgTextColorController.color = text.fill">
+  <spectrum-colorpicker
+  ng-model="AgTextColorController.color"
+  on-change="AgTextColorController.changeColor(text)"
+  format="'hex'"
+  options="{showInput: true, showAlpha: true}"></spectrum-colorpicker>
+</div>

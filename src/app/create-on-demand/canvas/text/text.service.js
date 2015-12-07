@@ -8,6 +8,7 @@
 
   function agTextService (agCanvasService, agObjectService) {
     var service = {
+      addText: addText,
       changeColor: changeColor,
       changeFont: changeFont,
       changeFontSize: changeFontSize,
@@ -17,6 +18,13 @@
     };
 
     return service;
+
+    function addText(text) {
+      var text = new fabric.IText(text.text, text);
+
+      agCanvasService.canvas.add(text);
+      return text;
+    }
 
     function changeColor(text, color) {
       text.fill = color;
