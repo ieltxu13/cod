@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Create On Demand</title>
     <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="vendors/lodash/lodash.min.js" charset="utf-8"></script>
     <script src="vendors/fabric.js/dist/fabric.min.js" charset="utf-8"></script>
@@ -11,6 +12,8 @@
     <link rel="stylesheet" href="vendors/spectrum/spectrum.css" media="screen" title="no title" charset="utf-8">
     <script src="vendors/angular-spectrum-colorpicker/dist/angular-spectrum-colorpicker.js" charset="utf-8"></script>
     <script src="vendors/webfontloader/webfontloader.js" charset="utf-8"></script>
+    <script src="vendors/firebase/firebase.js" charset="utf-8"></script>
+    <script src="vendors/angularfire/dist/angularfire.js" charset="utf-8"></script>
     <script>
       WebFont.load({
         google: {
@@ -20,20 +23,18 @@
     </script>
   </head>
   <body ng-app="create-on-demand">
-    <ag-canvas width="544" height="319"></ag-canvas>
 
-    <ag-text-list></ag-text-list>
-    <ag-new-text></ag-new-text>
-    <ag-canvas-settings></ag-canvas-settings>
-    <div ng-controller="AgTemplateController as AgTemplateController">
-      <button type="button" ng-click="AgTemplateController.loadTemplate('AG-1052')">Load Template</button>
-    </div>
+    <div ui-view></div>
 
     <script src="app/create-on-demand/create-on-demand.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/create-on-demand.routes.js" charset="utf-8"></script>
+    <!-- FIREBASE -->
+    <script src="app/create-on-demand/firebase/firebase.service.js" charset="utf-8"></script>
     <!-- UTILS -->
     <script src="app/create-on-demand/utils/color-picker/color.picker.directive.js" charset="utf-8"></script>
     <!-- CANVAS -->
     <script src="app/create-on-demand/canvas/canvas.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/canvas.controller.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/canvas.directive.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/canvas-settings.controller.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/canvas-settings.directive.js" charset="utf-8"></script>
@@ -58,6 +59,9 @@
     <!-- TEMPLATES -->
     <script src="app/create-on-demand/template/template.service.js" charset="utf-8"></script>
     <script src="app/create-on-demand/template/template.controller.js" charset="utf-8"></script>
+    <!-- TEMPLATES CATALOG -->
+    <script src="app/create-on-demand/template-catalog/template-catalog.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/template-catalog/template-catalog.controller.js" charset="utf-8"></script>
 
 
   </body>

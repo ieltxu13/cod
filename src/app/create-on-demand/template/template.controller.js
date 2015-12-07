@@ -4,14 +4,10 @@
   angular.module("create-on-demand")
   .controller("AgTemplateController", AgTemplateController);
 
-  AgTemplateController.$inject = ["template", "agTemplateService"];
+  AgTemplateController.$inject = ["agTemplateService"];
 
-  function AgTemplateController(template, agTemplateService) {
+  function AgTemplateController(agTemplateService) {
 
-    init();
-
-    function init() {
-      agTemplateService.currentTemplate = template;
-    }
+  
   }
 })();

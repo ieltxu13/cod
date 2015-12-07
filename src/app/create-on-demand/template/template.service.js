@@ -4,29 +4,29 @@
   angular.module("create-on-demand")
   .factory("agTemplateService", agTemplateService);
 
-  agTemplateService.$inject = ["$http", "$q", "agCanvasService", "agTextListService"]
-  function agTemplateService($http, $q, agCanvasService, agTextListService) {
+  agTemplateService.$inject = ["$q", "agTemplateCatalogService", "agTextService", "agTextListService","agCanvasService"]
+  function agTemplateService($q, agTemplateCatalogService, agTextService, agTextListService, agCanvasService) {
     var service = {
       currentTemplate: null,
-      loadTemplate: loadTemplate
+      initNewTemplate: initNewTemplate,
+      loadTemplate: loadTemplate,
     };
 
     return service;
 
+    function initNewTemplate() {
+      agCanvasService.init();
+    }
+
     function loadTemplate(id) {
       var deferred = $q.defer();
-
-      $http.get('templates/'+id+'/'+id+'.json')
-        .then(function(res){
-          deferred.resolve(res.data);
-        },
-      function(error) {
-        console.log('template loading error..');
-        deferred.reject(error);
+      agTemplateCatalogService.getTemplates()
+      .then(function(templates){
+        service.currentTemplate = _.findWhere(templates, {'$id': id})
+        deferred.resolve(service.currentTemplate);
       })
-
       return deferred.promise;
-
     }
+
   }
 })();
