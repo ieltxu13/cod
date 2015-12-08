@@ -10,28 +10,30 @@
     <script src="vendors/fabric.js/dist/fabric.min.js" charset="utf-8"></script>
     <script src="vendors/spectrum/spectrum.js" charset="utf-8"></script>
     <link rel="stylesheet" href="vendors/spectrum/spectrum.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="vendors/angular-loading/angular-loading.css" media="screen" title="no title" charset="utf-8">
     <script src="vendors/angular-spectrum-colorpicker/dist/angular-spectrum-colorpicker.js" charset="utf-8"></script>
     <script src="vendors/webfontloader/webfontloader.js" charset="utf-8"></script>
     <script src="vendors/firebase/firebase.js" charset="utf-8"></script>
     <script src="vendors/angularfire/dist/angularfire.js" charset="utf-8"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ['Sanchez']
-        }
-      });
-    </script>
+    <script src="vendors/spin.js/spin.js" charset="utf-8"></script>
+    <script src="vendors/angular-loading/angular-loading.js" charset="utf-8"></script>
   </head>
   <body ng-app="create-on-demand">
+    <!-- <div ng-controller"ApplicationController as ApplicationController">
+      <div dw-loading="{{ApplicationController.key}}" dw-loading-options="{text: 'loading'}"></div>
+    </div> -->
 
     <div ui-view></div>
-
     <script src="app/create-on-demand/create-on-demand.js" charset="utf-8"></script>
     <script src="app/create-on-demand/create-on-demand.routes.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/create-on-demand.application.controller.js" charset="utf-8"></script>
     <!-- FIREBASE -->
     <script src="app/create-on-demand/firebase/firebase.service.js" charset="utf-8"></script>
     <!-- UTILS -->
-    <script src="app/create-on-demand/utils/color-picker/color.picker.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/utils/fileread/file-input.directive.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/utils/fileread/file-reader.service.js" charset="utf-8"></script>
+    <!-- FONTS -->
+    <script src="app/create-on-demand/fonts/fonts.service.js" charset="utf-8"></script>
     <!-- CANVAS -->
     <script src="app/create-on-demand/canvas/canvas.service.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/canvas.controller.js" charset="utf-8"></script>
@@ -56,6 +58,20 @@
     <script src="app/create-on-demand/canvas/text/controls/color/text.control.color.directive.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/text/controls/size/text.control.size.controller.js" charset="utf-8"></script>
     <script src="app/create-on-demand/canvas/text/controls/size/text.control.size.directive.js" charset="utf-8"></script>
+    <!-- IMAGE UPLOAD -->
+    <script src="app/create-on-demand/canvas/image/upload/image.upload.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/image/upload/image.upload.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/image/upload/image.upload.directive.js" charset="utf-8"></script>
+    <!-- IMAGE LIST -->
+    <script src="app/create-on-demand/canvas/image-list/image-list.service.js" charset="utf-8"></script>
+    <!-- IMAGE -->
+    <script src="app/create-on-demand/canvas/image/image.service.js" charset="utf-8"></script>
+    <!-- BACKGROUND UPLOAD -->
+    <script src="app/create-on-demand/canvas/background/upload/background.upload.service.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/background/upload/background.upload.controller.js" charset="utf-8"></script>
+    <script src="app/create-on-demand/canvas/background/upload/background.upload.directive.js" charset="utf-8"></script>
+    <!-- BACKGROUND -->
+    <script src="app/create-on-demand/canvas/background/background.service.js" charset="utf-8"></script>
     <!-- TEMPLATES -->
     <script src="app/create-on-demand/template/template.service.js" charset="utf-8"></script>
     <script src="app/create-on-demand/template/template.controller.js" charset="utf-8"></script>

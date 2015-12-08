@@ -48,6 +48,14 @@
             agFirebaseService.init();
           }]
         }
+      });
+      //
+      // $rootScope.$on('stateChangStart', function(event) {
+      //   $loading.start('app');
+      // });
+      //
+      // $rootScope.$on('$stateChangeSuccess', function(event) {
+      //   $loading.finish('app');
       })
   });
 })();

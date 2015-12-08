@@ -1,7 +1,7 @@
 <div class="font-control-wrapper" ng-init="AgTextFontController.fontWeight = text.fontWeight; AgTextFontController.font = text.fontFamily">
   Font<select ng-model="AgTextFontController.font" ng-change="AgTextFontController.changeFont(text)">
-  <option style="font-family: Sanchez" value="Sanchez">Sanchez</option>
-</select>
+  <option ng-repeat="font in AgTextFontController.fonts" style="font-family:{{font}}">{{font}}</option>
+  </select>
 Font Weight<select ng-model="AgTextFontController.fontWeight" ng-change="AgTextFontController.changeFontWeight(text)">
   <option value="normal">normal</option>
   <option value="bold">bold</option>

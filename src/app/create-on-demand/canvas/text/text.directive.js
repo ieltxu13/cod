@@ -4,15 +4,16 @@
   angular.module("create-on-demand")
   .directive("agText", agTextDirective);
 
-  agTextDirective.$inject = ['agTextService'];
+  agTextDirective.$inject = ["agTextService"];
 
   function agTextDirective(agTextService) {
     var directive = {
-      restrict: 'EA',
+      restrict: "EA",
       scope: {
-        text: '=',
+        text: "=",
       },
-      templateUrl: 'app/create-on-demand/canvas/text/text.template.html'
+      templateUrl: "app/create-on-demand/canvas/text/text.template.html",
+      controller: "AgTextController"
     };
 
     return directive;

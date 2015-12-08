@@ -1,5 +1,5 @@
 <h1>Template list</h1>
 <a ui-sref="new-template">New template</a>
 <div ng-repeat="t in AgTemplateCatalogController.templates">
-  <a ui-sref="template({templateId: t.$id})">AG-1052</a>
+  <a ui-sref="template({templateId: t.$id})"><img src="{{t.thumbnail}}"/></a>
 </div>

@@ -32,7 +32,9 @@
           "height": 2.125
         },
         webScale: this.scale,
-        template : agCanvasService.canvas.toJSON()
+        template : agCanvasService.canvas.toJSON(),
+        thumbnail : agCanvasService.canvas.toDataURL(),
+        fonts: ['Comic Sans', 'Roboto', 'Sanchez']
       }
       agTemplateCatalogService.saveTemplate(templateJSON)
       console.log(agCanvasService.canvas.toJSON());

@@ -4,11 +4,12 @@
   angular.module("create-on-demand")
   .controller("AgTextFontController", AgTextFontController);
 
-  AgTextFontController.$inject = ["agTextService"];
+  AgTextFontController.$inject = ["agTextService", "agTemplateService"];
 
-  function AgTextFontController(agTextService) {
+  function AgTextFontController(agTextService, agTemplateService) {
     this.changeFont = changeFont;
     this.changeFontWeight = changeFontWeight;
+    this.fonts = agTemplateService.currentTemplate.fonts
 
     function changeFont(text) {
       agTextService.changeFont(text,this.font);

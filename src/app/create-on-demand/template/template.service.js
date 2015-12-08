@@ -22,9 +22,9 @@
       var deferred = $q.defer();
       agTemplateCatalogService.getTemplates()
       .then(function(templates){
-        service.currentTemplate = _.findWhere(templates, {'$id': id})
+        service.currentTemplate = _.findWhere(templates, {'$id': id});
         deferred.resolve(service.currentTemplate);
-      })
+      });
       return deferred.promise;
     }
 
