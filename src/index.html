@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Create On Demand</title>
     <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-animate/angular-animate.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-aria/angular-aria.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-material/angular-material.min.js" charset="utf-8"></script>
     <script src="vendors/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
     <script src="vendors/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="vendors/lodash/lodash.min.js" charset="utf-8"></script>
@@ -11,19 +14,22 @@
     <script src="vendors/spectrum/spectrum.js" charset="utf-8"></script>
     <link rel="stylesheet" href="vendors/spectrum/spectrum.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="vendors/angular-loading/angular-loading.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="vendors/angular-material/angular-material.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="vendors/material-design-lite/material.min.css" media="screen" title="no title" charset="utf-8">
     <script src="vendors/angular-spectrum-colorpicker/dist/angular-spectrum-colorpicker.js" charset="utf-8"></script>
     <script src="vendors/webfontloader/webfontloader.js" charset="utf-8"></script>
     <script src="vendors/firebase/firebase.js" charset="utf-8"></script>
     <script src="vendors/angularfire/dist/angularfire.js" charset="utf-8"></script>
     <script src="vendors/spin.js/spin.js" charset="utf-8"></script>
     <script src="vendors/angular-loading/angular-loading.js" charset="utf-8"></script>
+    <script src="vendors/material-design-lite/material.min.js" charset="utf-8"></script>
   </head>
   <body ng-app="create-on-demand">
     <!-- <div ng-controller"ApplicationController as ApplicationController">
       <div dw-loading="{{ApplicationController.key}}" dw-loading-options="{text: 'loading'}"></div>
     </div> -->
 
-    <div ui-view></div>
+    <div ui-view class="mdl-layout mdl-js-layout"></div>
     <script src="app/create-on-demand/create-on-demand.js" charset="utf-8"></script>
     <script src="app/create-on-demand/create-on-demand.routes.js" charset="utf-8"></script>
     <script src="app/create-on-demand/create-on-demand.application.controller.js" charset="utf-8"></script>
@@ -79,6 +85,9 @@
     <script src="app/create-on-demand/template-catalog/template-catalog.service.js" charset="utf-8"></script>
     <script src="app/create-on-demand/template-catalog/template-catalog.controller.js" charset="utf-8"></script>
 
+    <!-- APLICATION -->
+    <!-- CONFIGURATION PANEL -->
+    <script src="app/application/configuration-panel/configuration-panel.controller.js" charset="utf-8"></script>
 
   </body>
 </html>

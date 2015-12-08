@@ -11,7 +11,7 @@
     init();
 
     function init() {
-      if(_.isNull(agTemplateService.currentTemplate)){
+      if(_.isUndefined(agTemplateService.currentTemplate) || _.isUndefined(agTemplateService.currentTemplate)){
         agTemplateService.initNewTemplate();
       } else {
         agCanvasService.init(agTemplateService.currentTemplate);

@@ -1,5 +1,68 @@
-<ag-canvas width="544" height="319"></ag-canvas>
-<ag-text-list></ag-text-list>
-<ag-new-text></ag-new-text>
-<ag-canvas-settings></ag-canvas-settings>
-<ag-image-upload></ag-image-upload>
+<!-- Simple header with fixed tabs. -->
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Postcard Configurator</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Nav link 1</a>
+        <a class="mdl-navigation__link" href="#">Nav link 2</a>
+        <a class="mdl-navigation__link" href="#">Nav link 3</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Postcard Configurator</span>
+    <span class="mdl-layout__title">Simple Layout</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="#">Nav link 2</a>
+      <a class="mdl-navigation__link" href="#">Nav link 2</a>
+      <a class="mdl-navigation__link" href="#">Nav link 3</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--8-col">
+        <ag-canvas width="544" height="319"></ag-canvas>
+
+      </div>
+      <div id="configuration-panel" class="mdl-cell mdl-cell--4-col"
+      ng-controller="AgConfigurationPanelController as AgConfigurationPanelController">
+        <div ng-if="AgConfigurationPanelController.selectedText != null">
+          <md-tabs>
+            <md-tab label="Font">
+              <ag-text-font text="AgConfigurationPanelController.selectedText"></ag-text-font>
+            </md-tab>
+            <md-tab label="Size">
+              <ag-text-size text="AgConfigurationPanelController.selectedText"></ag-text-size>
+            </md-tab>
+            <md-tab label="Color">
+              <ag-text-color text="AgConfigurationPanelController.selectedText"></ag-text-color>
+            </md-tab>
+            <md-tab label="Texts">
+              <ag-text-list></ag-text-list>
+            </md-tab>
+          </md-tabs>
+        </div>
+        <div ng-if="AgConfigurationPanelController.selectedText == null">
+          <md-tabs>
+            <md-tab label="Upload Image">1</md-tab>
+            <md-tab label="Select Image">2</md-tab>
+          </md-tabs>
+        </div>
+      </div>
+    </div>
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+        <ag-new-text></ag-new-text>
+        <ag-canvas-settings></ag-canvas-settings>
+        <ag-image-upload></ag-image-upload>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+</div>

@@ -56,6 +56,6 @@
       //
       // $rootScope.$on('$stateChangeSuccess', function(event) {
       //   $loading.finish('app');
-      })
+      //})
   });
 })();
