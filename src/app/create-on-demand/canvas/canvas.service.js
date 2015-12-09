@@ -29,7 +29,7 @@
 
     function init(template) {
       var canvas = new fabric.Canvas('ag-canvas');
-      if(_.isUndefined(template)){
+      if(_.isUndefined(template) || _.isNull(template)){
         canvas.setWidth(400);
         canvas.setHeight(400);
         service.canvas = canvas;
